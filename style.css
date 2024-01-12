@@ -252,6 +252,7 @@ div.star-rating > p{
         padding: 3rem 1rem 1rem 1rem;
     }
 }
+
 div.main>div.header-descrioption {
     color: #000;
 }
@@ -278,6 +279,7 @@ div.main>div.header-descrioption>p {
 div.like {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 div.share-like {
@@ -485,20 +487,6 @@ div.pr-srv {
     padding: 30px 20px;
     margin-bottom: 20px;
 }
-@media screen and (max-width: 784px) {
-    div.pr-srv {
-        display: grid;
-        grid-template-columns: 60% 35%, 50% 50%;
-        column-gap: 5%;
-        justify-content: space-evenly;
-    } 
-
-    .prch-btn button {
-        width: 80%;
-    }
-}
-
-
 div.pr-srv>div>button {
     padding: 15px 40px;
     background-color: #1dbf73;
@@ -902,7 +890,6 @@ div.hrt-tag-rtn > div > label{
     nav > .nav-icons {
         width: 100%;
     }
-
     nav > div.logo{
         display: flex;
         justify-content: space-between;
@@ -915,18 +902,15 @@ div.hrt-tag-rtn > div > label{
         display: none;
 
     }
-
     nav > .nav-icons > ul > li > div {
         margin-bottom: 10px;
         padding: 1rem 0;
     }
-
     nav > div.profile{
         padding-top: 2rem;
         width: 70%;
         margin: auto;
     }
-
     .grid-container {
         display: grid;
         grid-template-columns: 70%;
@@ -943,6 +927,15 @@ div.hrt-tag-rtn > div > label{
     }
     div.card{
         height: 240px;
+    }
+    div.pr-srv {
+        display: grid;
+        grid-template-columns: 60% 35%, 50% 50%;
+        column-gap: 5%;
+        justify-content: space-evenly;
+    } 
+    .prch-btn button {
+        width: 80%;
     }
 }
 
