@@ -1,16 +1,16 @@
 /************************************** nav bar ******************************* */
+/* Styling for the navigation bar */
 nav {
-    /* box-shadow: 0px 5px 20px 0px #adadad; */
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
-    padding: 2rem 2rem
+    padding: 0 50px; /* Horizontal padding */
+    padding: 2rem 2rem; /* Vertical padding */
 }
 
+/* Styling for the profile section in the navigation bar */
 nav > div.profile {
     display: flex;
     width: 15%;
@@ -18,15 +18,18 @@ nav > div.profile {
     align-items: center;
 }
 
+/* Styling for profile icons in the navigation bar */
 nav > div.profile i {
     font-size: 24px;
     color: #868585;
 }
 
+/* Styling for a notification badge in the profile section */
 nav > div.profile > div {
     position: relative;
 }
 
+/* Styling for the notification badge content */
 nav > div.profile > div > span {
     position: absolute;
     font-size: 13px;
@@ -37,6 +40,8 @@ nav > div.profile > div > span {
     border-radius: 50%;
     padding: 2px;
 }
+
+/* Styling for the profile button in the navigation bar */
 nav > div.profile > button {
     width: 50px;
     height: 50px;
@@ -44,6 +49,7 @@ nav > div.profile > button {
     border: 1px solid #03a049;
 }
 
+/* Styling for the logo section in the navigation bar */
 nav > .logo {
     width: 25%;
     font-size: 34px;
@@ -51,15 +57,20 @@ nav > .logo {
     justify-content: center;
     align-items: center;
 }
+
+/* Styling for the logo image in the navigation bar */
 nav img.logo-img{
     width: 150px;
     height: 50px;
 }
 
-nav>.nav-icons {
+/* Styling for the navigation icons section in the navigation bar */
+nav > .nav-icons {
     width: 60%;
+    display: flex;
 }
 
+/* Styling for the profile image */
 .profile-img {
     background-image: url('./img/profile.avif');
     background-size: cover;
@@ -67,6 +78,8 @@ nav>.nav-icons {
     cursor: pointer;
     position: relative;
 }
+
+/* Styling for the dropdown list */
 .drp-lst{
     position: absolute;
     top: 52px;
@@ -77,6 +90,7 @@ nav>.nav-icons {
     min-width: 300px;
     padding: 0 !important;
 }
+
 
 .drp-lst > div {
     display: flex;
@@ -190,8 +204,9 @@ nav>.nav-icons>ul {
     display: flex;
     list-style: none;
     width: 80%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    flex-grow: 1;
 }
 
 nav>.nav-icons>ul>li>div {
@@ -295,13 +310,7 @@ div.share-like>i {
 }
 
 /******************************** carousel ***************************/
-
-/* style.css */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* Styling for the carousel container */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -309,17 +318,20 @@ body {
     border-radius: 10px;
 }
 
+/* Styling for individual carousel slides */
 .carousel-slide {
     display: none;
     max-height: 400px;
 }
 
+/* Styling for images within carousel slides */
 .carousel-slide > img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
 
+/* Styling for previous and next buttons in the carousel */
 .prev-button,
 .next-button {
     position: absolute;
@@ -342,30 +354,30 @@ body {
     right: -15px;
 }
 
-/* test */
+/* Test styling for a specific div with class 'carousel' */
 div.carousel {
     width: 100%;
     margin: 50px 0;
 }
 
-/* slider */
+/* Styling for a slider within the carousel */
 div.slide-img {
     width: 95%;
     border-radius: 10px;
     margin: auto;
     max-height: 500px;
-
 }
 
-div.slide-img>img {
+/* Styling for images within the slider */
+div.slide-img > img {
     width: 100%;
     object-fit: cover;
     max-height: 400px;
     border-radius: 10px;
-
 }
 
-div.crsel-dsc>p {
+/* Styling for description within the carousel */
+div.crsel-dsc > p {
     background-color: #fdfdfd;
     box-shadow: 0px 0px 10px #e3dfdf;
     border-radius: 10px;
@@ -375,17 +387,21 @@ div.crsel-dsc>p {
     line-height: 24px;
 }
 
-/********************************** services ***************************/
+/********************************** Services ***************************/
+
+/* Styling for the services section */
 div.servics {
     margin: 20px 0;
 }
 
+/* Styling for the header of each service section */
 div.service-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Styling for individual service sections */
 div.service-one,
 div.service-two,
 div.service-three {
@@ -396,73 +412,80 @@ div.service-three {
     margin-bottom: 20px;
 }
 
-div.service-one>div,
-div.service-two>div,
-div.service-three>div {
+/* Styling for common elements within service sections */
+div.service-one > div,
+div.service-two > div,
+div.service-three > div {
     margin-top: 20px;
 }
 
-div.service-one>div>span,
-div.service-two>div>span,
-div.service-three>div>span {
+/* Styling for spans within service sections */
+div.service-one > div > span,
+div.service-two > div > span,
+div.service-three > div > span {
     padding: 10px 15px;
     background-color: #e9f9f1;
     color: #1dbf73;
     border-radius: 5px;
 }
 
+/* Styling for the check description section */
 div.chck-description {
     display: flex;
     padding: 15px 0;
 }
 
-div.chck-description>p {
+/* Styling for paragraphs within check description */
+div.chck-description > p {
     font-size: 17px;
     line-height: 20px;
     font-weight: 500;
     padding: 0 55px 0 20px;
 }
 
-div.select-all>i,
-div.select-all label {
-    color: #dbdada;
-    font-size: 20px;
-}
-
-div.chck-description>div>i {
+/* Styling for icons and labels within check description */
+div.chck-description > div > i {
     font-size: 30px;
     color: #cfcfcf;
 }
 
-.green-txt {
-    background-color: #02c75b;
-    padding: 5px 10px;
-    border-radius: 10px;
+div.select-all > i,
+div.select-all > label {
+    color: #dbdada;
+    font-size: 20px;
 }
-div.div-icons{
+
+/* Styling for icons and labels within div-icons */
+div.div-icons {
     display: flex;
     justify-content: space-evenly;
     width: 60%;
     margin: auto;
     padding: 1rem 0;
 }
-div.div-icons > i{
+
+div.div-icons > i {
     color: #02c75b;
     font-size: 24px;
     background-color: #f6f6f6;
     padding: 10px;
     border-radius: 5px;
 }
-div.div-para > p{
+
+/* Styling for paragraphs within div-para */
+div.div-para > p {
     font-size: 14px;
     padding: 15px 10px 15px 0;
     line-height: 18px;
 }
-div.div-btn{
+
+/* Styling for buttons within div-btn */
+div.div-btn {
     width: 100%;
     margin: auto;
 }
-.btn-grn{
+
+.btn-grn {
     padding: 11px 0px;
     width: 100%;
     background-color: #1dbf73;
@@ -473,10 +496,14 @@ div.div-btn{
     cursor: pointer;
 }
 
+
 /************************************  Purchase service  ******************************/
-div.prch-div{
+/* Styling for the purchase div */
+div.prch-div {
     padding: 3rem 0;
 }
+
+/* Styling for the purchase service section */
 div.pr-srv {
     display: grid;
     grid-template-columns: 50% 20% 20%;
@@ -487,7 +514,9 @@ div.pr-srv {
     padding: 30px 20px;
     margin-bottom: 20px;
 }
-div.pr-srv>div>button {
+
+/* Styling for buttons within the purchase service section */
+div.pr-srv > div > button {
     padding: 15px 40px;
     background-color: #1dbf73;
     color: #fff;
@@ -497,6 +526,7 @@ div.pr-srv>div>button {
     cursor: pointer;
 }
 
+/* Styling for the service price section */
 div.srv-price {
     background-color: #f6f6f6;
     padding: 15px 40px;
@@ -507,6 +537,7 @@ div.srv-price {
     font-weight: 600;
 }
 
+/* Styling for the service quantity section */
 div.srv-qntity {
     background-color: #f6f6f6;
     display: flex;
@@ -516,7 +547,8 @@ div.srv-qntity {
     padding: 10px 0;
 }
 
-div.srv-qntity>div {
+/* Styling for individual elements within the service quantity section */
+div.srv-qntity > div {
     width: 50%;
     margin: auto;
     display: flex;
@@ -524,7 +556,8 @@ div.srv-qntity>div {
     align-items: center;
 }
 
-div.srv-qntity>div>span>i {
+/* Styling for icons within the service quantity section */
+div.srv-qntity > div > span > i {
     color: #02c75b;
     background-color: #fff;
     padding: 5px;
@@ -532,12 +565,15 @@ div.srv-qntity>div>span>i {
     cursor: pointer;
 }
 
-/************************************  over all rating  ******************************/
-div.rating-title>label {
+/************************************ Overall Rating ******************************/
+
+/* Styling for the rating title label */
+div.rating-title > label {
     font-size: 28px;
     margin-top: -6px;
 }
 
+/* Styling for the overall rating section */
 div.over-all-rating {
     background-color: #fdfdfd;
     box-shadow: 0px 0px 10px #e3dfdf;
@@ -546,6 +582,7 @@ div.over-all-rating {
     margin-bottom: 20px;
 }
 
+/* Styling for the quality rating section */
 div.quality-rating {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -553,65 +590,47 @@ div.quality-rating {
     align-items: center;
 }
 
-div.stars>label {
+/* Styling for labels within the stars section */
+div.stars > label {
     font-size: 24px;
 }
 
+/* Styling for the progress bar */
 div.progress-bar {
     width: 250px;
     background: #ebe9e9;
     border-radius: 20px;
 }
 
-div.progress-bar>div {
+/* Styling for the progress bar content */
+div.progress-bar > div {
     height: 10px;
     width: 100%;
     background: #FFD700;
     border-radius: 20px;
-    width: 80%
+    width: 80%;
 }
 
+/* Styling for the progress bar and stars section */
 div.prg-strs {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Styling for the return title paragraph */
 p.rtn-title {
     font-weight: 550;
 }
-div.ttl-rtn-div > label{
+
+/* Styling for the total return div label */
+div.ttl-rtn-div > label {
     margin-top: -6px;
-    color: #FFD700
-}
-
-@media screen and (max-width: 827px) {
-    div.quality-rating {
-        display: grid;
-        grid-template-columns: 100%;
-        justify-content: start;
-        align-items: center;
-    }
-
-    div.progress-bar {
-        width: 150px;
-    }
-
-    div.prg-strs {
-        justify-content: space-evenly;
-    }
-}
-
-@media screen and (max-width: 477px) {
-
-    div.prg-strs {
-        flex-direction: column;
-        justify-content: end;
-        align-items: end;
-    }
+    color: #FFD700;
 }
 
 /************************************ clients comments ******************************/
+/* Styling for the clients' comments section */
 div.clients-comments {
     margin-top: 20px;
     background-color: #fdfdfd;
@@ -619,15 +638,20 @@ div.clients-comments {
     border-radius: 10px;
     padding: 30px 20px;
 }
-div.crc-big, div.crc-small{
+
+/* Styling for the big and small comment containers */
+div.crc-big, div.crc-small {
     border: none;
 }
-div.crc-big > img, div.crc-small > img{
+
+/* Styling for images within big and small comment containers */
+div.crc-big > img, div.crc-small > img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
 
+/* Styling for the comment container */
 div.cnt-comment {
     margin: auto;
     margin-top: 10px;
@@ -635,26 +659,34 @@ div.cnt-comment {
     padding: 30px 20px;
 }
 
-div.cnt-comment>div {
+div.cnt-comment > div {
     align-items: start;
 }
 
+/* Styling for the profile image within the comment */
 div.profile-img-comment {
     justify-content: center;
     padding-left: 5px;
     padding-right: 5px;
 }
 
+/* Styling for the gray star label */
 label.gray-star {
     color: #adadad;
 }
+
+/* Styling for text with gray color */
 .text-gray {
     color: #adadad;
 }
+
+/* Styling for the comment content */
 p.comment-content {
     line-height: 20px;
     color: #3a3a3a;
 }
+
+/* Styling for the comment textarea */
 textarea.comments {
     font-size: 17px;
     padding: 25px;
@@ -663,9 +695,11 @@ textarea.comments {
     outline: none;
     border-radius: 10px;
     border: none;
-    color: #636262
+    color: #636262;
 }
-div.btn-submit-cmnt>button {
+
+/* Styling for the submit comment button */
+div.btn-submit-cmnt > button {
     padding: 10px 20px;
     background-color: #1dbf73;
     color: #fff;
@@ -674,15 +708,26 @@ div.btn-submit-cmnt>button {
     font-size: 20px;
     cursor: pointer;
 }
-div.thr-prt{
+
+/* Styling for the three-part section */
+div.thr-prt {
     justify-content: space-between;
 }
-div.sbmt-cmnt{
+
+/* Styling for the submit comment section */
+div.sbmt-cmnt {
     display: flex;
     padding: 30px 20px;
 }
+/* styling for the select all button */
+.green-txt{
+    background-color: #02c75b;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/************************************** Cards ***************************************/
 
-/************************************** cards ***************************************/
+/* Styling for the grid container */
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -690,24 +735,33 @@ div.sbmt-cmnt{
     justify-content: center;
     align-items: center;
 }
-div.mn-sggst-srv{
-    margin-top: 50px; 
-    padding: 2rem 4rem
+
+/* Styling for the main suggested services section */
+div.mn-sggst-srv {
+    margin-top: 50px;
+    padding: 2rem 4rem;
 }
+
+/* Styling for the heart icon */
 .heart-icon {
     cursor: pointer;
 }
-div.sgst-srv{
+
+/* Styling for the suggested services section */
+div.sgst-srv {
     justify-content: space-between;
 }
-div.sgst-srv a{
+
+/* Styling for links within suggested services */
+div.sgst-srv a {
     display: inline-block;
     text-decoration: none;
     color: #adadad;
     font-size: 18px;
 }
 
-.grid-container>div {
+/* Styling for individual card containers */
+.grid-container > div {
     background-color: #fff;
     text-align: center;
     font-size: 30px;
@@ -716,6 +770,7 @@ div.sgst-srv a{
     box-shadow: 0px 0px 10px #e3dfdf;
 }
 
+/* Styling for the card container with background image */
 .card {
     background-image: url('./img/slide.jpg');
     background-size: cover;
@@ -725,21 +780,27 @@ div.sgst-srv a{
     border-radius: 10px 10px 0 0;
     position: relative;
 }
-p.crd-txt{
+
+/* Styling for text within the card */
+p.crd-txt {
     font-size: 16px;
     text-align: start;
 }
-div.hrt-div{
-    width: 50px; 
-    height: 50px; 
+
+/* Styling for the heart icon div within the card */
+div.hrt-div {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: #fff; 
-    position: absolute; 
-    top: 20px; left: 20px; 
-    display: flex; 
-    justify-content: center; 
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+
 
 /* **************************** right side ********************************* */
 /* info */
@@ -937,6 +998,31 @@ div.hrt-tag-rtn > div > label{
     } 
     .prch-btn button {
         width: 80%;
+    }
+}
+@media screen and (max-width: 827px) {
+    div.quality-rating {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: start;
+        align-items: center;
+    }
+
+    div.progress-bar {
+        width: 150px;
+    }
+
+    div.prg-strs {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 477px) {
+
+    div.prg-strs {
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
     }
 }
 

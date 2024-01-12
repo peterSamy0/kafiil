@@ -1,33 +1,40 @@
-// dropdown menu 
+// Dropdown menu
 function myFunction() {
-    var resMenu = document.getElementById("dropdown-ul");
-    if (resMenu.style.display === "block") {
+  // Get the dropdown menu element
+  var resMenu = document.getElementById("dropdown-ul");
+
+  // Toggle the display style based on its current state
+  if (resMenu.style.display === "block") {
       resMenu.style.display = "none";
-    } else {
+  } else {
       resMenu.style.display = "block";
-    }
   }
-// 
+}
+
+// Carousel
 let currentSlide = 0;
 
+// Function to display the specified slide
 function showSlide(n) {
   const slides = document.getElementsByClassName("carousel-slide");
 
+  // Set the current slide index within the bounds of the slide array
   if (n >= slides.length) {
-    currentSlide = 0;
+      currentSlide = 0;
   } else if (n < 0) {
-    currentSlide = slides.length - 1;
+      currentSlide = slides.length - 1;
   } else {
-    currentSlide = n;
+      currentSlide = n;
   }
 
+  // Hide all slides and display the current one
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+      slides[i].style.display = "none";
   }
-
   slides[currentSlide].style.display = "block";
 }
 
+// Functions to navigate to the next and previous slides
 function nextSlide() {
   showSlide(currentSlide + 1);
 }
@@ -36,124 +43,131 @@ function prevSlide() {
   showSlide(currentSlide - 1);
 }
 
+// Show the first slide when the document is loaded
 document.addEventListener("DOMContentLoaded", function () {
   showSlide(currentSlide);
 });
 
-
-// select all 
+// Service Selection
 let selectAllChecked = false;
 let serviceArray = [];
-// add service one
+
+// Function to toggle service one
 function toggleServiceOne() {
-    const addSerOne = document.getElementById('add-srv-one');
-    const rmvSerOne = document.getElementById('rmv-srv-one');
-    addSerOne.classList.toggle('d-none');
-    rmvSerOne.classList.toggle('d-none');
-    if(addSerOne.classList.contains('d-none')){
-        increaseQuantity();
-    }else{
-        decreaseQuantity()
-    }
+  // Toggle visibility of add and remove buttons
+  const addSerOne = document.getElementById('add-srv-one');
+  const rmvSerOne = document.getElementById('rmv-srv-one');
+  addSerOne.classList.toggle('d-none');
+  rmvSerOne.classList.toggle('d-none');
+
+  // Adjust the quantity based on button state
+  addJustQuantity(addSerOne)
 }
 // add service two
 function toggleServiceTwo() {
-    const addSerOne = document.getElementById('add-srv-two');
+    const addSerTwo = document.getElementById('add-srv-two');
     const rmvSerOne = document.getElementById('rmv-srv-two');
-    addSerOne.classList.toggle('d-none');
+    addSerTwo.classList.toggle('d-none');
     rmvSerOne.classList.toggle('d-none');
-    if(addSerOne.classList.contains('d-none')){
-        increaseQuantity();
-    }else{
-        decreaseQuantity()
-    }
+
+    // Adjust the quantity based on button state
+    addJustQuantity(addSerTwo)
     
 }
 // add service three
 function toggleServiceThree() {
-    const addSerOne = document.getElementById('add-srv-three');
+    const addSerThree = document.getElementById('add-srv-three');
     const rmvSerOne = document.getElementById('rmv-srv-three');
-    addSerOne.classList.toggle('d-none');
+    addSerThree.classList.toggle('d-none');
     rmvSerOne.classList.toggle('d-none');
-    if(addSerOne.classList.contains('d-none')){
-        increaseQuantity();
-    }else{
-        decreaseQuantity()
-    }
+
+    // Adjust the quantity based on button state
+    addJustQuantity(addSerThree)
 }
+// function to addjust the quantity in the purchase
+function addJustQuantity(val){
+  if(val.classList.contains('d-none')){
+    increaseQuantity();
+  }else{
+      decreaseQuantity()
+  }
+}
+// Similar functions for service two and three
 
-
-
+// Function to toggle the selection of all services
 function toggleSelectAll(element) {
   const allIcons = document.querySelectorAll('.fa-regular.fa-circle');
   const icon = element;
   selectAllChecked = !selectAllChecked;
   icon.classList.toggle('green-txt')
+
+  // Toggle visibility of icons based on the selection state
   allIcons.forEach(icon => {
-    if (selectAllChecked) {
-      icon.classList.add('d-none');
-      icon.nextElementSibling.classList.remove('d-none');
-
-      quantity = 3;
-      document.getElementById('quantity').textContent = quantity
-      updateTotalPrice()
-    } else {
-      icon.classList.remove('d-none');
-      icon.nextElementSibling.classList.add('d-none');
-
-      quantity = 0;
-      document.getElementById('quantity').textContent = quantity
-      updateTotalPrice()
-    }
+      if (selectAllChecked) {
+          icon.classList.add('d-none');
+          icon.nextElementSibling.classList.remove('d-none');
+          quantity = 3;
+          document.getElementById('quantity').textContent = quantity
+          updateTotalPrice()
+      } else {
+          icon.classList.remove('d-none');
+          icon.nextElementSibling.classList.add('d-none');
+          quantity = 0;
+          document.getElementById('quantity').textContent = quantity
+          updateTotalPrice()
+      }
   });
 }
 
-// for counter for Purchase service
+// Counter and Total Price
 let quantity = 1;
 const pricePerService = 100;
-// update the total price
+
+// Function to update the total price based on the quantity
 function updateTotalPrice() {
-    const totalPriceElement = document.getElementById('totalPrice');
-    totalPriceElement.textContent = (quantity * pricePerService) + "$";
+  const totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = (quantity * pricePerService) + "$";
 }
-// increase the counter
+
+// Functions to increase and decrease the quantity
 function increaseQuantity() {
-    quantity++;
-    document.getElementById('quantity').textContent = quantity;
-    updateTotalPrice();
+  quantity++;
+  document.getElementById('quantity').textContent = quantity;
+  updateTotalPrice();
 }
-// decrease the counter
+
 function decreaseQuantity() {
-    if (quantity > 1) {
-        quantity--;
-        document.getElementById('quantity').textContent = quantity;
-        updateTotalPrice();
-    }
+  if (quantity > 1) {
+      quantity--;
+      document.getElementById('quantity').textContent = quantity;
+      updateTotalPrice();
+  }
 }
-// print the result in alert
+
+// Function to display a purchase alert
 function purchaseService() {
-    alert(`You purchased ${quantity} services for a total of ${quantity * pricePerService}$`);
+  alert(`You purchased ${quantity} services for a total of ${quantity * pricePerService}$`);
 }
 
-
-
-// add suggested service to favorite 
+// Favorite Service
 function addFavorite(element) {
-    let heartColor = element.getAttribute('fill');
-    if (heartColor === 'none') {
-        element.setAttribute('fill', 'red');
-    } else {
-        element.setAttribute('fill', 'none');
-    }
+  // Toggle the fill color of the heart icon
+  let heartColor = element.getAttribute('fill');
+  if (heartColor === 'none') {
+      element.setAttribute('fill', 'red');
+  } else {
+      element.setAttribute('fill', 'none');
+  }
 }
 
-// toggle profile list
+// Toggle profile list visibility
 function openList(event) {
   event.stopPropagation();
   let profile_icon = document.getElementById('prfl-lst');
   profile_icon.classList.toggle('d-none');
 }
 
+// Hide profile list when clicking outside
 document.body.addEventListener('click', function (event) {
   let profile_icon = document.getElementById('prfl-lst');
   let profile_button = document.getElementById('prfl-icn');
