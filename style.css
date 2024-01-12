@@ -819,6 +819,7 @@ div.oth-srv-img{
 }
 div.oth-srv-img > img{
     border-radius: 10px 0 0 10px;
+    height: 100%;
 }
 div.oth-srv-dsc{
     width: 60%;
