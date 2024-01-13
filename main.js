@@ -198,6 +198,7 @@ const subContainers = document.querySelectorAll('.sub-div-dark');
 const text = document.querySelectorAll('.txt');
 const darkModeElements = document.querySelectorAll('.dark-mode-info p, .dark-mode-info i, .dark-mode-info div');
 const navDark = document.querySelectorAll('nav i, nav p');
+const whiteShadow = document.querySelectorAll('.wht-shwo');
 
 nightModeToggle.addEventListener('click', function () {
     body.classList.toggle('night-mode');
@@ -205,6 +206,11 @@ nightModeToggle.addEventListener('click', function () {
     containers.forEach(container => {
       container.classList.toggle('div-dark-mode')
     });
+
+    whiteShadow.forEach(item => {
+      item.classList.toggle('white-shadow');
+    });
+    
 
     subContainers.forEach(item => {
       item.classList.toggle('subDiv-dark-mode')
@@ -242,8 +248,10 @@ function sideBar(event) {
 document.body.addEventListener('click', function (event) {
   const rightSide = document.getElementById('rght-sd');
   const shadow = document.getElementsByClassName('shadow');
+  const opnSideBarBtn = document.getElementById('opn-sdbr');
   if (rightSide.classList.contains('open-side-bar') && !event.target.closest('#rght-sd')) {
     rightSide.classList.remove('open-side-bar');
     shadow[0].classList.add('d-none');
+    opnSideBarBtn.classList.toggle('rg-65')
   }
 });

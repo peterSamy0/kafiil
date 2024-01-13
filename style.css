@@ -50,6 +50,11 @@ nav {
     z-index: 1001;
     background-color: rgba(0, 0, 0, .5);
 }
+
+.white-shadow{
+    background-color: rgba(255, 255, 255, .5) !important;
+    border-radius: 10px;
+}
 /* Styling for the profile section in the navigation bar */
 nav > div.profile {
     display: flex;
