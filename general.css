@@ -8,6 +8,7 @@ body {
     background-color: #fffafa;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 .gry-colr{
     color: #a1a1a1 !important;

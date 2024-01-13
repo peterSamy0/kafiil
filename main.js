@@ -11,7 +11,7 @@ function myFunction() {
   }
 }
 
-// // Event listener for window resize
+// Event listener for window resize
 if(window.innerWidth > 768){
   window.addEventListener("resize", function() {
     var resMenu = document.getElementById("dropdown-ul");
@@ -148,7 +148,7 @@ function increaseQuantity() {
   document.getElementById('quantity').textContent = quantity;
   updateTotalPrice();
 }
-
+// Functions to decrease and decrease the quantity
 function decreaseQuantity() {
   if (quantity > 1) {
       quantity--;
@@ -187,6 +187,7 @@ document.body.addEventListener('click', function (event) {
     if (!profile_button.contains(event.target) && event.target.id !== 'prfl-lst') {
       profile_icon.classList.add('d-none');
     }
+
 });
 
 // dark mode function
@@ -220,4 +221,29 @@ nightModeToggle.addEventListener('click', function () {
     navDark.forEach( element => {
       element.classList.toggle('icn-wht');
     })
+});
+
+
+// function to open the right side bar when the width is less than 991px
+const opnSideBar = document.getElementById('opn-sdbr')
+opnSideBar.addEventListener('click', sideBar)
+
+
+function sideBar(event) {
+  event.stopPropagation(); 
+  const rightSide = document.getElementById('rght-sd');
+  const shadow = document.getElementsByClassName('shadow');
+  const opnSideBarBtn = document.getElementById('opn-sdbr');
+  opnSideBarBtn.classList.toggle('rg-65')
+  rightSide.classList.toggle('open-side-bar');
+  shadow[0].classList.toggle('d-none');
+}
+
+document.body.addEventListener('click', function (event) {
+  const rightSide = document.getElementById('rght-sd');
+  const shadow = document.getElementsByClassName('shadow');
+  if (rightSide.classList.contains('open-side-bar') && !event.target.closest('#rght-sd')) {
+    rightSide.classList.remove('open-side-bar');
+    shadow[0].classList.add('d-none');
+  }
 });

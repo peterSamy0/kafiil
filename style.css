@@ -10,6 +10,46 @@ nav {
     padding: 2rem 2rem; /* Vertical padding */
 }
 
+/* styling for the button to open the right side */
+.opn-rit-sd{
+    position: absolute;
+    top: -25px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #02c75b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    z-index: 1002;
+}
+.rg-65{
+    right: 65%;
+}
+.opn-rit-sd > i{
+    color: #fff;
+    font-size: 24px;
+}
+.open-side-bar{
+    display: block !important;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 60% !important;
+    background-color: #fff !important;
+    z-index: 1002;
+}
+.shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, .5);
+}
 /* Styling for the profile section in the navigation bar */
 nav > div.profile {
     display: flex;
@@ -246,6 +286,7 @@ div.main-sidebar {
 div.main {
     width: 70%;
     box-sizing: border-box;
+    position: relative;
 }
 
 div.right-side {
@@ -945,6 +986,10 @@ div.hrt-tag-rtn > div > label{
         column-gap: 5%;
         justify-content: center;
         align-items: center;
+    }
+
+    .opn-rit-sd{
+        display: block;
     }
 
     div.grid-container>div {
