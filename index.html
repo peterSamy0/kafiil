@@ -76,7 +76,7 @@
                 </span>
             </div>
             <button class="profile-img" id="prfl-icn" onclick="openList(event)">
-                <div class="drp-lst wte-shdw d-none" id="prfl-lst">
+                <div class="drp-lst wte-shdw d-none dark-mode" id="prfl-lst">
                     <div>
                         <div>
                             <div class="prf-im"></div>
@@ -99,7 +99,7 @@
                         </div>
                         <div>
                             <label class="switch">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" id="nightModeToggle">
                                 <span class="slider round"></span>
                             </label>
                         </div>
@@ -136,7 +136,7 @@
         <div class="main">
             <div class="header-descrioption">
                 <h5>Design / Logo Design</h5>
-                <p>
+                <p class="txt">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor sit
                     amet,
                 </p>
@@ -199,7 +199,7 @@
 
                 <div class="crsel-dsc">
                     <h3>Description</h3>
-                    <p>
+                    <p class=" dark-mode">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum dolor
                         sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque Lorem
                         ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras
@@ -219,7 +219,7 @@
                         <label for="select-all">Select All</label>
                     </div>
                 </div>
-                <div class="service-one">
+                <div class="service-one dark-mode">
                     <div class="chck-description">
                         <div>
                             <i class="fa-regular fa-circle cursor d-none" id="add-srv-one"
@@ -238,7 +238,7 @@
                         <span>2days</span>
                     </div>
                 </div>
-                <div class="service-two">
+                <div class="service-two dark-mode">
                     <div class="chck-description">
                         <div>
                             <i class="fa-regular fa-circle cursor" id="add-srv-two" onclick="toggleServiceTwo()"></i>
@@ -256,7 +256,7 @@
                         <span>2days</span>
                     </div>
                 </div>
-                <div class="service-three">
+                <div class="service-three dark-mode">
                     <div class="chck-description">
                         <div>
                             <i class="fa-regular fa-circle cursor" id="add-srv-three"
@@ -279,19 +279,19 @@
                 <!-- purchase service -->
                 <div class="prch-div">
                     <h3>Purchase Service</h3>
-                    <div class="pr-srv">
-                        <div class="srv-qntity">
+                    <div class="pr-srv dark-mode">
+                        <div class="srv-qntity sub-div-dark">
                             <div>
                                 <span>
                                     <i class="fa-solid fa-minus flex me-10" onclick="decreaseQuantity()"></i>
                                 </span>
-                                <span id="quantity" class="fs-16">1</span>
+                                <span id="quantity" class="fs-16 sub-div-dark">1</span>
                                 <span>
                                     <i class="fa-solid fa-plus flex ms-10" onclick="increaseQuantity()"></i>
                                 </span>
                             </div>
                         </div>
-                        <div class="srv-price" id="totalPrice">100$</div>
+                        <div class="srv-price sub-div-dark" id="totalPrice">100$</div>
                         <div class="prch-btn">
                             <button onclick="purchaseService()">Purchase</button>
                         </div>
@@ -309,7 +309,7 @@
                 </div>
 
                 <!-- over all rating -->
-                <div class="over-all-rating">
+                <div class="over-all-rating dark-mode">
                     <div class="quality-rating py-10">
                         <!-- title and rating -->
                         <div class="flex ttl-rtn-div">
@@ -401,7 +401,7 @@
 
 
                 <!-- clients comments -->
-                <div class="clients-comments">
+                <div class="clients-comments dark-mode">
                     <div>
                         <!-- main dev -->
                         <div class="cnt-comment">
@@ -435,7 +435,7 @@
                                     </div>
                                     <!-- lower dev -->
                                     <div>
-                                        <p class="fs-14 py-10 comment-content">
+                                        <p class="fs-14 py-10 comment-content txt">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras
                                             neque Lorem
                                             ipsum dolor sit amet,Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -482,7 +482,7 @@
                                     </div>
                                     <!-- lower dev -->
                                     <div>
-                                        <p class="fs-14 py-10 comment-content">
+                                        <p class="fs-14 py-10 comment-content txt">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras
                                             neque Lorem
                                             ipsum dolor sit amet,Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -529,7 +529,7 @@
                                     </div>
                                     <!-- lower dev -->
                                     <div>
-                                        <p class="fs-14 py-10 comment-content">
+                                        <p class="fs-14 py-10 comment-content txt">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras
                                             neque Lorem
                                             ipsum dolor sit amet,Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -576,7 +576,7 @@
         <!-- right side -->
         <div class="right-side">
             <!-- contact us -->
-            <div class="wte-shdw">
+            <div class="wte-shdw dark-mode">
                 <h4 class="h4-title">Contact Me</h4>
                 <div>
                     <div class="div-icons">
@@ -597,7 +597,7 @@
             </div>
 
             <!-- info -->
-            <div class="wte-shdw">
+            <div class="wte-shdw dark-mode dark-mode-info">
                 <h4 class="h4-title">Info</h4>
                 <div>
                     <div class="info-cntnr">
@@ -675,7 +675,7 @@
             </div>
 
             <!-- share and earn -->
-            <div class="wte-shdw shr-ern">
+            <div class="wte-shdw shr-ern dark-mode">
                 <h4 class="h4-title">
                     Share & Earn
                 </h4>
@@ -710,21 +710,21 @@
                 </div>
                 <!-- service one -->
                 <div class="sllr-oth-service">
-                    <div class="">
+                    <div class="dark-mode">
                         <div class="oth-srv-img">
                             <img src="./img/image1.jpg" width="100%" alt="">
                         </div>
-                        <div class="oth-srv-dsc">
+                        <div class="oth-srv-dsc dark-mode">
                             <div>
                                 <p>Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...</p>
                             </div>
                             <div class="hrt-tag-rtn pt-10">
                                 <div>
                                     <label for="star2" title="2 stars">&#9733;</label>
-                                    <span>4.9 (50)</span>
+                                     <span class="txt">4.9 (50)</span>
                                     <div class="ms-5">
                                         <i class="fa-solid fa-tag fs-14 grn-colr"></i>
-                                        <span class="fs-12">10$</span>
+                                        <span class="fs-12 txt">10$</span>
                                     </div>
                                 </div>
                                 <div>
@@ -748,21 +748,21 @@
 
                 <!-- service two -->
                 <div class="sllr-oth-service mt-10">
-                    <div class="">
+                    <div class="dark-mode">
                         <div class="oth-srv-img">
                             <img src="./img/image1.jpg" width="100%" alt="">
                         </div>
-                        <div class="oth-srv-dsc">
+                        <div class="oth-srv-dsc dark-mode">
                             <div>
                                 <p>Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...</p>
                             </div>
                             <div class="hrt-tag-rtn pt-10">
                                 <div>
                                     <label for="star2" title="2 stars">&#9733;</label>
-                                    <span>4.9 (50)</span>
+                                     <span class="txt">4.9 (50)</span>
                                     <div class="ms-5">
                                         <i class="fa-solid fa-tag fs-14 grn-colr"></i>
-                                        <span class="fs-12">10$</span>
+                                        <span class="fs-12 txt">10$</span>
                                     </div>
                                 </div>
                                 <div>
@@ -785,21 +785,21 @@
 
                 <!-- service three -->
                 <div class="sllr-oth-service mt-10">
-                    <div class="">
+                    <div class="dark-mode">
                         <div class="oth-srv-img">
                             <img src="./img/image1.jpg" width="100%" alt="">
                         </div>
-                        <div class="oth-srv-dsc">
+                        <div class="oth-srv-dsc dark-mode">
                             <div>
                                 <p>Lorem ipsum dolor sit ame, consecteturLorem ipsum dolor...</p>
                             </div>
                             <div class="hrt-tag-rtn pt-10">
                                 <div>
                                     <label for="star2" title="2 stars">&#9733;</label>
-                                    <span>4.9 (50)</span>
+                                     <span class="txt">4.9 (50)</span>
                                     <div class="ms-5">
-                                        <i class="fa-solid fa-tag fs-14 grn-colr"></i>
-                                        <span class="fs-12">10$</span>
+                                        <i class="fa-solid fa-tag fs-14 grn-colr txt"></i>
+                                        <span class="fs-12 txt">10$</span>
                                     </div>
                                 </div>
                                 <div>
@@ -837,7 +837,7 @@
         <!-- cards -->
         <div>
             <div class="grid-container">
-                <div class="mb-20">
+                <div class="mb-20 dark-mode">
                     <!-- upper part -->
                     <div class="card">
                         <div class="hrt-div">
@@ -892,7 +892,7 @@
                     </div>
                 </div>
 
-                <div class="mb-20">
+                <div class="mb-20 dark-mode">
                     <!-- upper part -->
                     <div class="card">
                         <div class="hrt-div">
@@ -947,7 +947,7 @@
                     </div>
                 </div>
 
-                <div class="mb-20">
+                <div class="mb-20 dark-mode">
                     <!-- upper part -->
                     <div class="card">
                         <div class="hrt-div">
@@ -1002,7 +1002,7 @@
                     </div>
                 </div>
 
-                <div class="mb-20">
+                <div class="mb-20 dark-mode">
                     <!-- upper part -->
                     <div class="card">
                         <div class="hrt-div">

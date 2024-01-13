@@ -175,3 +175,37 @@ document.body.addEventListener('click', function (event) {
       profile_icon.classList.add('d-none');
   }
 });
+
+
+// dark mode function
+const nightModeToggle = document.getElementById('nightModeToggle');
+const body = document.body;
+const containers = document.querySelectorAll('.dark-mode');
+const subContainers = document.querySelectorAll('.sub-div-dark');
+const text = document.querySelectorAll('.txt');
+const darkModeElements = document.querySelectorAll('.dark-mode-info p, .dark-mode-info i, .dark-mode-info div');
+const navDark = document.querySelectorAll('nav i, nav p');
+
+nightModeToggle.addEventListener('click', function () {
+  body.classList.toggle('night-mode');
+  
+  containers.forEach(container => {
+    container.classList.toggle('div-dark-mode')
+  });
+
+  subContainers.forEach(item => {
+    item.classList.toggle('subDiv-dark-mode')
+  });
+
+  text.forEach(item => {
+    item.classList.toggle('wht-txt')
+  });
+
+  darkModeElements.forEach(element => {
+    element.classList.toggle('wht-txt');
+  });
+
+  navDark.forEach( element => {
+    element.classList.toggle('icn-wht');
+  })
+});

@@ -91,13 +91,15 @@ nav > .nav-icons {
     padding: 0 !important;
 }
 
-
 .drp-lst > div {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
     padding:10px;
     align-items: center;
+}
+.drp-lst > div:nth-child(6) {
+    border-bottom: none !important;
 }
 .drp-lst > div > div {
     display: flex;
@@ -314,14 +316,16 @@ div.share-like>i {
 .carousel-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
     border-radius: 10px;
+    max-height: 400px;
 }
 
 /* Styling for individual carousel slides */
 .carousel-slide {
     display: none;
     max-height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 /* Styling for images within carousel slides */
@@ -338,12 +342,14 @@ div.share-like>i {
     top: 50%;
     transform: translateY(-50%);
     padding: 10px 15px;
-    background-color: #fff;
+    background-color: #f1f1f1;
     border-radius: 50%;
     color: #02c75b;
     border: none;
     font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .prev-button {
@@ -379,7 +385,7 @@ div.slide-img > img {
 /* Styling for description within the carousel */
 div.crsel-dsc > p {
     background-color: #fdfdfd;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
     border-radius: 10px;
     padding: 30px 20px;
     margin-bottom: 20px;
@@ -406,7 +412,7 @@ div.service-one,
 div.service-two,
 div.service-three {
     background-color: #fdfdfd;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
     border-radius: 10px;
     padding: 30px 20px;
     margin-bottom: 20px;
@@ -509,7 +515,7 @@ div.pr-srv {
     grid-template-columns: 50% 20% 20%;
     column-gap: 5%;
     background-color: #fdfdfd;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
     border-radius: 10px;
     padding: 30px 20px;
     margin-bottom: 20px;
@@ -576,7 +582,7 @@ div.rating-title > label {
 /* Styling for the overall rating section */
 div.over-all-rating {
     background-color: #fdfdfd;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
     border-radius: 10px;
     padding: 30px 20px;
     margin-bottom: 20px;
@@ -634,7 +640,7 @@ div.ttl-rtn-div > label {
 div.clients-comments {
     margin-top: 20px;
     background-color: #fdfdfd;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
     border-radius: 10px;
     padding: 30px 20px;
 }
@@ -767,7 +773,7 @@ div.sgst-srv a {
     font-size: 30px;
     border-radius: 10px 10px 0 0;
     min-height: 300px;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
 }
 
 /* Styling for the card container with background image */
@@ -872,7 +878,8 @@ div.sllr-oth-service > div{
     width: 100%;
     display: flex;
     background-color: #fdfdfd;
-    box-shadow: 0px 0px 10px #e3dfdf;
+    box-shadow: 0px 0px 7px #e3dfdf;
+    border-radius: 10px 0 0 10px;
 }
 div.oth-srv-img{
     width: 40%;
@@ -1052,4 +1059,25 @@ div.hrt-tag-rtn > div > label{
     div.card{
         height: 200px;
     }
+}
+
+/* styling for dark night */
+.night-mode {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+.div-dark-mode {
+    background-color: #535353 !important;
+    color: #fff !important;
+    box-shadow: 0px 0px 7px #8b8b8b !important;
+}
+.subDiv-dark-mode {
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+}
+.wht-txt{
+    color: #fff !important;
+}
+.icn-wht{
+    color: #e1e1e1 !important;
 }
