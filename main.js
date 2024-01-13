@@ -11,6 +11,19 @@ function myFunction() {
   }
 }
 
+// // Event listener for window resize
+if(window.innerWidth > 768){
+  window.addEventListener("resize", function() {
+    var resMenu = document.getElementById("dropdown-ul");
+    // Check if the screen width is greater than 768px
+    if (window.innerWidth > 768) {
+      resMenu.style.display = "flex";
+    }else{
+      resMenu.style.display = "none";
+    }
+  });
+}
+
 // Carousel
 let currentSlide = 0;
 
@@ -169,13 +182,12 @@ function openList(event) {
 
 // Hide profile list when clicking outside
 document.body.addEventListener('click', function (event) {
-  let profile_icon = document.getElementById('prfl-lst');
-  let profile_button = document.getElementById('prfl-icn');
-  if (!profile_button.contains(event.target) && event.target.id !== 'prfl-lst') {
+    let profile_icon = document.getElementById('prfl-lst');
+    let profile_button = document.getElementById('prfl-icn');
+    if (!profile_button.contains(event.target) && event.target.id !== 'prfl-lst') {
       profile_icon.classList.add('d-none');
-  }
+    }
 });
-
 
 // dark mode function
 const nightModeToggle = document.getElementById('nightModeToggle');
@@ -187,25 +199,25 @@ const darkModeElements = document.querySelectorAll('.dark-mode-info p, .dark-mod
 const navDark = document.querySelectorAll('nav i, nav p');
 
 nightModeToggle.addEventListener('click', function () {
-  body.classList.toggle('night-mode');
+    body.classList.toggle('night-mode');
   
-  containers.forEach(container => {
-    container.classList.toggle('div-dark-mode')
-  });
+    containers.forEach(container => {
+      container.classList.toggle('div-dark-mode')
+    });
 
-  subContainers.forEach(item => {
-    item.classList.toggle('subDiv-dark-mode')
-  });
+    subContainers.forEach(item => {
+      item.classList.toggle('subDiv-dark-mode')
+    });
 
-  text.forEach(item => {
-    item.classList.toggle('wht-txt')
-  });
+    text.forEach(item => {
+      item.classList.toggle('wht-txt')
+    });
 
-  darkModeElements.forEach(element => {
-    element.classList.toggle('wht-txt');
-  });
+    darkModeElements.forEach(element => {
+      element.classList.toggle('wht-txt');
+    });
 
-  navDark.forEach( element => {
-    element.classList.toggle('icn-wht');
-  })
+    navDark.forEach( element => {
+      element.classList.toggle('icn-wht');
+    })
 });
